@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/gestion_ressource.iml" filepath="$PROJECT_DIR$/.idea/gestion_ressource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_authentification/micro_authentification.iml" filepath="$PROJECT_DIR$/micro_authentification/micro_authentification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_authentification/proxy/proxy.iml" filepath="$PROJECT_DIR$/micro_authentification/proxy/proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_configuration/service_configuration.iml" filepath="$PROJECT_DIR$/service_configuration/service_configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro_authentification/service_registration/service_registration.iml" filepath="$PROJECT_DIR$/micro_authentification/service_registration/service_registration.iml" />
+    </modules>
+  </component>
+</project>
