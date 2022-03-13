@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8876b833-ea8e-4f1f-bd13-681688dd8ea0" name="Changes" comment="" />
+    <list default="true" id="8876b833-ea8e-4f1f-bd13-681688dd8ea0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/src/main/java/com/gestion_ressource/proxy/ProxyApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/proxy/src/test/java/com/gestion_ressource/proxy/ProxyApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/MicroAuthentificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/MicroAuthentificationApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +62,7 @@
       <recent name="C:\web\springBoot\gestion_ressource\configuration_repo" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProxyApplication">
+  <component name="RunManager" selected="Spring Boot.MicroAuthentificationApplication">
     <configuration name="MicroAuthentificationApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="micro_authentification" />
       <extension name="coverage">
@@ -89,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProxyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ProxyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="proxy" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gestion_ressource.proxy.ProxyApplication" />
       <method v="2">
@@ -138,6 +150,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MicroAuthentificationApplication" />
+        <item itemvalue="Spring Boot.ProxyApplication" />
         <item itemvalue="JUnit.MicroAuthentificationApplicationTests.contextLoads" />
         <item itemvalue="JUnit.ServiceConfigurationApplicationTests" />
       </list>
@@ -155,7 +168,7 @@
       <workItem from="1647126790187" duration="223000" />
       <workItem from="1647127052868" duration="511000" />
       <workItem from="1647127647911" duration="15796000" />
-      <workItem from="1647188141304" duration="471000" />
+      <workItem from="1647188141304" duration="3142000" />
     </task>
     <servers />
   </component>

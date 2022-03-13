@@ -7,7 +7,7 @@ spring:
         - id: authentification
           uri: http://localhost:8081/
           predicates:
-            - Path=/auth/**
+            - Path=/api/**
 
 server:
   port: 8080
