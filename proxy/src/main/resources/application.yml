@@ -1,13 +1,13 @@
 spring:
   application:
     name: proxy
-  cloud:
-    gateway:
-      routes:
-        - id: authentification
-          uri: http://localhost:8081/
-          predicates:
-            - Path=/api/**
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: authentification
+#          uri: http://localhost:8081/
+#          predicates:
+#            - Path=/auth/**
 
 server:
   port: 8080

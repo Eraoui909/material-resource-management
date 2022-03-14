@@ -8,6 +8,9 @@
         <option value="$PROJECT_DIR$/service_configuration/pom.xml" />
         <option value="$PROJECT_DIR$/micro_authentification/service_registration/pom.xml" />
         <option value="$PROJECT_DIR$/micro_authentification/proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/service_registration/pom.xml" />
+        <option value="$PROJECT_DIR$/micro_test/pom.xml" />
       </list>
     </option>
   </component>

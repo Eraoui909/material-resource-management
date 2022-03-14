@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="service_configuration" />
         <module name="proxy" />
+        <module name="micro_test" />
         <module name="service_registration" />
         <module name="micro_authentification" />
       </profile>
@@ -16,6 +17,8 @@
     <bytecodeTargetLevel>
       <module name="micro-authentification" target="17" />
       <module name="micro_authentification" target="11" />
+      <module name="micro_authentification (1)" target="11" />
+      <module name="micro_test" target="11" />
       <module name="microAuthentification" target="1.5" />
       <module name="proxy" target="11" />
       <module name="service_configuration" target="11" />
@@ -27,6 +30,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="micro_authentification" options="-parameters" />
+      <module name="micro_authentification (1)" options="-parameters" />
+      <module name="micro_test" options="-parameters" />
       <module name="proxy" options="-parameters" />
       <module name="service_configuration" options="-parameters" />
       <module name="service_livraison" options="-parameters" />
