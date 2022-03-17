@@ -5,75 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8876b833-ea8e-4f1f-bd13-681688dd8ea0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_tcnative_classes_2_0_48_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_74_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_core_1_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_1_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_server_3_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_3_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_3_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/filter/CustomAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/helper/AuthEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/helper/JwtHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/model/ERole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/model/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/model/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/model/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/service/UserAuth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_test/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micro_test/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/config/GatewayConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/AdminFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/ChefFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/ProfFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/ProviderFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/RespoFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro_authentification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/micro_authentification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro_authentification/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/micro_authentification/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/Controllers/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/helper/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/helper/JwtHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/config/GatewayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/helper/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/helper/JwtHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +63,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -134,8 +79,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\web\springBoot\gestion_ressource\configuration_repo" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gestion_ressource.proxy.filter" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroAuthentificationApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProxyApplication">
     <configuration name="MicroAuthentificationApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="micro_authentification" />
       <extension name="coverage">
@@ -231,15 +186,15 @@
       <item itemvalue="Spring Boot.ServiceConfigurationApplication" />
       <item itemvalue="Spring Boot.ServiceLivraisonApplication" />
       <item itemvalue="Spring Boot.ServiceRegistrationApplication" />
-      <item itemvalue="Spring Boot.ProxyApplication" />
-      <item itemvalue="Spring Boot.MicroAuthentificationApplication" />
       <item itemvalue="Spring Boot.MicroAuthentificationApplication (1)" />
       <item itemvalue="Spring Boot.MicroTestApplication" />
+      <item itemvalue="Spring Boot.ProxyApplication" />
+      <item itemvalue="Spring Boot.MicroAuthentificationApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MicroAuthentificationApplication" />
         <item itemvalue="Spring Boot.ProxyApplication" />
+        <item itemvalue="Spring Boot.MicroAuthentificationApplication" />
         <item itemvalue="JUnit.MicroAuthentificationApplicationTests.contextLoads" />
         <item itemvalue="JUnit.ServiceConfigurationApplicationTests" />
       </list>
@@ -262,7 +217,10 @@
       <workItem from="1647276052215" duration="138000" />
       <workItem from="1647276254086" duration="409000" />
       <workItem from="1647276718528" duration="468000" />
-      <workItem from="1647277249071" duration="12023000" />
+      <workItem from="1647277249071" duration="13365000" />
+      <workItem from="1647384913008" duration="107000" />
+      <workItem from="1647432153298" duration="1384000" />
+      <workItem from="1647533275045" duration="8784000" />
     </task>
     <servers />
   </component>

@@ -7,9 +7,12 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -23,9 +26,18 @@ public class JwtHelper {
 
     public String generateJwtToken(Authentication authentication) {
         UserAuth userPrincipal = (UserAuth) authentication.getPrincipal();
+        List<String> list = new ArrayList<>();
+
+        userPrincipal.getAuthorities().forEach(
+                role -> {
+                    list.add(role.getAuthority());
+                }
+        );
+
         return Jwts.builder()
                 .setSubject((userPrincipal.getUsername()))
                 .setIssuedAt(new Date())
+                .claim("roles", list)
                 .setExpiration(new Date(System.currentTimeMillis() + jwtExpirationMs))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret)
                 .compact();

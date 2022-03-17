@@ -1,12 +1,15 @@
 package com.gestion_ressource.proxy.helper;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Component
 @Slf4j
@@ -31,5 +34,25 @@ public class JwtHelper {
             log.error("We've found an error while parsing JWT token: {}", e.getMessage());
         }
         return false;
+    }
+
+    public boolean isAdmin(String token) {
+        Claims claims = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+        return claims.get("roles", ArrayList.class).contains("ROLE_ADMIN");
+    }
+
+    public boolean isRespo(String token) {
+        Claims claims = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+        return claims.get("roles", ArrayList.class).contains("ROLE_CHEF_RESOURCES");
+    }
+
+    public boolean isProvider(String token) {
+        Claims claims = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+        return claims.get("roles", ArrayList.class).contains("ROLE_PROVIDER");
+    }
+
+    public boolean isChef(String token) {
+        Claims claims = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+        return claims.get("roles", ArrayList.class).contains("ROLE_CHEF_DEP");
     }
 }

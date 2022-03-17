@@ -1,5 +1,6 @@
 package com.gestion_ressource.proxy.config;
 
+import com.gestion_ressource.proxy.filter.AdminFilter;
 import com.gestion_ressource.proxy.filter.AuthFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -11,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class GatewayConfig {
 
     @Autowired
-    private AuthFilter filter;
+    private AdminFilter filter;
 
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
