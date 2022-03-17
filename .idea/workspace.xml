@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8876b833-ea8e-4f1f-bd13-681688dd8ea0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/AdminFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/ChefFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/ProfFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/ProviderFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/filter/RespoFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/Controllers/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/helper/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro_authentification/src/main/java/com/gestion_ressource/micro_authentification/helper/JwtHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/helper/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/src/main/java/com/gestion_ressource/proxy/helper/JwtHelper.java" afterDir="false" />
-    </list>
+    <list default="true" id="8876b833-ea8e-4f1f-bd13-681688dd8ea0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +209,7 @@
       <workItem from="1647277249071" duration="13365000" />
       <workItem from="1647384913008" duration="107000" />
       <workItem from="1647432153298" duration="1384000" />
-      <workItem from="1647533275045" duration="8784000" />
+      <workItem from="1647533275045" duration="9170000" />
     </task>
     <servers />
   </component>
