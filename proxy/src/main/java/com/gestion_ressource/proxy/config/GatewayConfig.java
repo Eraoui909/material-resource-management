@@ -19,6 +19,7 @@ public class GatewayConfig {
         return builder.routes()
                 .route("authentification", r -> r.path("/auth/**").uri("http://localhost:8081/"))
                 .route("test", r -> r.path("/test/**").filters(f -> f.filter(filter)).uri("http://localhost:8082/"))
+                .route("enseignant",r -> r.path("/enseignant/**").uri("http://localhost:8083/"))
                 .build();
     }
 }
