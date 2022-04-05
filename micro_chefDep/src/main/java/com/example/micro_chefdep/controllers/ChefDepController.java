@@ -1,5 +1,6 @@
 package com.example.micro_chefdep.controllers;
 
+import com.example.micro_chefdep.Services.ChefDepService;
 import com.example.micro_chefdep.models.ChefDep;
 import com.example.micro_chefdep.repositories.ChefDefRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,17 +13,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/chefDepartement")
 public class ChefDepController {
 
-    @Autowired
-    private ChefDefRepo chefDefRepo;
+    private ChefDepService chefDepService;
 
-    @Transactional
     @PutMapping(path = "update/{chefDepID}")
     public void updateChefDep(@PathVariable("chefDepID") String id, @RequestBody ChefDep chefDep){
-        ChefDep c = chefDefRepo.findById(id).orElseThrow(()-> new IllegalStateException("ChefDep doesnt exist"));
-        c.setEmail(chefDep.getEmail());
-        c.setName(chefDep.getName());
-        c.setAddress(chefDep.getAddress());
-        c.setDepartement(chefDep.getDepartement());
-        c.setPhone(chefDep.getPhone());
+        chefDepService.updateChefDep(id, chefDep);
     }
 }
