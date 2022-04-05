@@ -1,4 +1,4 @@
-package com.example.micro_enseignant.modales;
+package com.example.micro_enseignant.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -27,4 +27,5 @@ public class Enseignant {
 
     @NotBlank
     private String address;
+
 }
