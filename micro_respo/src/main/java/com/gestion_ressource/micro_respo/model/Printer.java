@@ -14,7 +14,7 @@ import javax.validation.constraints.NotBlank;
 @Setter
 public class Printer {
     @Id
-    private String Id;
+    private String id;
 
     @NotBlank
     private String provider;
@@ -30,6 +30,8 @@ public class Printer {
 
     @NotBlank
     private String warrantyPeriod;
+
+    private Owner affectedTo;
 
     @NotBlank
     private String Date;
