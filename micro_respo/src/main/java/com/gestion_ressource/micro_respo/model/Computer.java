@@ -33,6 +33,8 @@ public class Computer {
     @NotBlank
     private String warrantyPeriod;
 
+    private Owner affectedTo;
+
     @NotBlank
     private String Date;
 }
