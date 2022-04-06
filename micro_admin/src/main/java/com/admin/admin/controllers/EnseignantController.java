@@ -44,4 +44,6 @@ public class EnseignantController {
     public void deleteTeacher(@PathVariable String id){
         repo.deleteById(id);
     }
+
+
 }
