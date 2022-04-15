@@ -1,16 +1,21 @@
 package com.example.micro_chefdep.models;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Getter
-@Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@Document(collection = "enseignant")
 public class Enseignant {
+    @Id
+    private String id;
 
     @NotBlank
     private String name;
@@ -27,5 +32,14 @@ public class Enseignant {
     private String address;
 
     @NotBlank
-    private Departement departement;
+    private String departement;
+
+    public Enseignant(String name, String email, String phone, String address, String departement) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.departement = departement;
+    }
 }
+

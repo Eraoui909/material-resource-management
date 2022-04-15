@@ -7,15 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
 public class MicroAuthentificationApplication implements CommandLineRunner{
 
+<<<<<<< HEAD
     @Autowired
     RoleRepository repository;
+=======
+
+>>>>>>> f353f20aeef78d4775b510f96f07e0c5d965cab0
     public static void main(String[] args) {
         SpringApplication.run(MicroAuthentificationApplication.class, args);
     }
