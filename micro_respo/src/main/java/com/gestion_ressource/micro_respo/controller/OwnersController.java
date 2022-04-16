@@ -28,4 +28,14 @@ public class OwnersController {
         return repo.findById(id);
     }
 
+    @GetMapping("/name/{name}")
+    public Optional<Owner> getByName(@PathVariable String name){
+        return repo.findByName(name);
+    }
+
+    @GetMapping("/departement/{name}")
+    public Optional<Owner> getByLaboratoire(@PathVariable String name){
+        return repo.findByLaboratoire(name);
+    }
+
 }

@@ -28,6 +28,11 @@ public class EnseignantController {
         return repo.findById(id);
     }
 
+    @GetMapping("/laboratoire/{name}")
+    public List<Enseignant> getByLaboratoire(@PathVariable String name){
+        return repo.findByLaboratoire(name);
+    }
+
     @PostMapping("/add")
     public Enseignant addTeacher(@RequestBody Enseignant e){
 

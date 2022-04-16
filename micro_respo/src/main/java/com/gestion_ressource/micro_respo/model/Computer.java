@@ -28,12 +28,17 @@ public class Computer {
     private String hardDisk;
 
     @NotBlank
+    private String RAM;
+
+    @NotBlank
     private String screen;
 
     @NotBlank
     private String warrantyPeriod;
 
-    private Owner affectedTo;
+    private Owner affectedToOwner;
+
+    private String affectedToDepartment;
 
     @NotBlank
     private String Date;
