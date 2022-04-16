@@ -1,6 +1,8 @@
 package com.admin.admin.controllers;
 
+import com.admin.admin.models.Department;
 import com.admin.admin.models.Enseignant;
+import com.admin.admin.repositries.DepartmentRepo;
 import com.admin.admin.repositries.EnseignantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -8,46 +10,42 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 200)
 @RestController
-@RequestMapping("/teachers")
-public class EnseignantController {
+@RequestMapping("/departments")
+public class DepartmentController {
+
 
     @Autowired
-    private EnseignantRepo repo;
+    private DepartmentRepo repo;
 
     @GetMapping("/")
-    public List<Enseignant> getAllTeachers(){
+    public List<Department> getAllDepartments(){
+
         return repo.findAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Enseignant> getTeacher(@PathVariable String id){
+    public Optional<Department> getDepartment(@PathVariable String id){
 
         return repo.findById(id);
     }
 
-    @GetMapping("/laboratoire/{name}")
-    public List<Enseignant> getByLaboratoire(@PathVariable String name){
-        return repo.findByLaboratoire(name);
-    }
-
     @PostMapping("/add")
-    public Enseignant addTeacher(@RequestBody Enseignant e){
+    public Department addDepartment(@RequestBody Department e){
 
         return repo.save(e);
     }
 
     @PostMapping("/update")
-    public Enseignant updateTeacher(@RequestBody Enseignant e){
+    public Department updateDepartment(@RequestBody Department e){
 
         return repo.save(e);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTeacher(@PathVariable String id){
+    public void deleteDepartment(@PathVariable String id){
         repo.deleteById(id);
     }
-
 
 }
