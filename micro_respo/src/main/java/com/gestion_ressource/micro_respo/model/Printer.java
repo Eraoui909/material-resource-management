@@ -31,7 +31,9 @@ public class Printer {
     @NotBlank
     private String warrantyPeriod;
 
-    private Owner affectedTo;
+    private Owner affectedToOwner;
+
+    private String affectedToDepartment;
 
     @NotBlank
     private String Date;
