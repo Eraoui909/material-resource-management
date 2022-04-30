@@ -1,4 +1,4 @@
-package com.gestion_ressource.micro_authentification.model;
+package com.example.micro_chefdep.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-public class User {
+public class MemberProfile {
     @Id
     private String id;
 
@@ -36,11 +36,11 @@ public class User {
 
     private String Address;
 
-    private String Laboratory;
+    private String laboratory;
 
     private Set<Role> authorities = new HashSet<Role>();
 
-    public User(String username, String email, String password) {
+    public MemberProfile(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;

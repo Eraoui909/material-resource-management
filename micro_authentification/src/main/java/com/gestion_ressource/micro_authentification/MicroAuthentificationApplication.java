@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class MicroAuthentificationApplication implements CommandLineRunner{
+public class MicroAuthentificationApplication implements CommandLineRunner {
 
     @Autowired
     RoleRepository repository;
@@ -27,4 +27,5 @@ public class MicroAuthentificationApplication implements CommandLineRunner{
 //        repository.save(new Role(ERole.ROLE_CHEF_RESOURCES));
 //        repository.save(new Role(ERole.ROLE_PROVIDER));
     }
+
 }
