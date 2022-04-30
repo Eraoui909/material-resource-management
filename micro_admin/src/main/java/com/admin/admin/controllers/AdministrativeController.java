@@ -2,6 +2,7 @@ package com.admin.admin.controllers;
 
 import com.admin.admin.models.Administrative;
 import com.admin.admin.repositries.AdministrativeRepo;
+import com.admin.admin.services.AdministrativeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,8 @@ public class AdministrativeController {
 
     @Autowired
     private AdministrativeRepo repo;
+    @Autowired
+    private AdministrativeService administrativeService;
 
     @GetMapping("/")
     public List<Administrative> getAlladministative(){
@@ -27,8 +30,15 @@ public class AdministrativeController {
     }
 
     @PostMapping("/add")
-    public Administrative addAdministrative(@RequestBody Administrative a){
-        return repo.save(a);
+    public Administrative addAdministrative(@RequestBody Administrative e){
+        e.setId("54655644654");
+        e.setPassword(e.getEmail());
+        e.setUsername(e.getEmail());
+        e.setLaboratoire("infooooooooo");
+        System.err.println(e.toString());
+        administrativeService.addAdministrative(e);
+
+        return e;
     }
 
     @PostMapping("/update")
