@@ -2,6 +2,8 @@ package com.admin.admin.controllers;
 
 import com.admin.admin.models.Enseignant;
 import com.admin.admin.repositries.EnseignantRepo;
+import com.admin.admin.services.EnseignantService;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +15,14 @@ import java.util.Optional;
 @RequestMapping("/teachers")
 public class EnseignantController {
 
+
+    @Autowired
+    private EnseignantService enseignantService;
+
     @Autowired
     private EnseignantRepo repo;
+
+
 
     @GetMapping("/")
     public List<Enseignant> getAllTeachers(){
@@ -32,10 +40,16 @@ public class EnseignantController {
         return repo.findByLaboratoire(name);
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add") @JsonIgnore
     public Enseignant addTeacher(@RequestBody Enseignant e){
+        e.setId("54655644654");
 
-        return repo.save(e);
+        e.setPassword(e.getEmail());
+        e.setUsername(e.getEmail());
+        System.err.println(e.toString());
+        enseignantService.addEnseignant(e);
+
+        return e;
     }
 
     @PostMapping("/update")
@@ -48,6 +62,7 @@ public class EnseignantController {
     public void deleteTeacher(@PathVariable String id){
         repo.deleteById(id);
     }
+
 
 
 }

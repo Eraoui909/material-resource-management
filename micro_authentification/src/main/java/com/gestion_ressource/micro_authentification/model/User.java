@@ -18,7 +18,7 @@ import java.util.Set;
 @Setter
 public class User {
     @Id
-    private String Id;
+    private String id;
 
     @NotBlank
     private String username;
@@ -35,6 +35,8 @@ public class User {
     private String phone;
 
     private String Address;
+
+    private String Laboratory;
 
     private Set<Role> authorities = new HashSet<Role>();
 

@@ -56,23 +56,24 @@ public class AuthController {
 
         UserAuth userDetails = (UserAuth) authentication.getPrincipal();
 
-        List<String> roles = userDetails.getAuthorities().stream()
-                .map(GrantedAuthority::getAuthority)
-                .collect(Collectors.toList()
-        );
+//        List<String> roles = userDetails.getAuthorities().stream()
+//                .map(GrantedAuthority::getAuthority)
+//                .collect(Collectors.toList()
+//        );
         log.info("login");
 
-        return new ResponseEntity<JwtResponse>(new JwtResponse(jwt,
-                    userDetails.getId(),
-                    userDetails.getUsername(),
-                    userDetails.getEmail(),
-                    roles),
+        return new ResponseEntity<JwtResponse>(new JwtResponse(
+                jwt,
+                userRepository.findById(userDetails.getId()).orElseThrow()
+        ),
                 HttpStatus.OK
         );
     }
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest registerRequest) {
+
+        System.err.println(registerRequest.getRoles());
 
         if (userRepository.existsByUsername(registerRequest.getUsername())) {
             return new ResponseEntity<String>("Error: Username is already taken!", HttpStatus.BAD_REQUEST);
@@ -104,10 +105,12 @@ public class AuthController {
                     roles.add(adminRole);
                     break;
                 case "prof":
+
                     Role modRole = roleRepository.findByName(ERole.ROLE_PROF)
                             .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                     roles.add(modRole);
                     break;
+
                 case "chef_departement":
                     Role chefDep = roleRepository.findByName(ERole.ROLE_CHEF_DEP)
                             .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
@@ -122,6 +125,11 @@ public class AuthController {
                     Role provider = roleRepository.findByName(ERole.ROLE_PROVIDER)
                             .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                     roles.add(provider);
+                    break;
+                case "administrative":
+                    Role administrative = roleRepository.findByName(ERole.ROLE_ADMINISTRATIVE)
+                            .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+                    roles.add(administrative);
                     break;
             }
         });

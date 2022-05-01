@@ -15,5 +15,6 @@ public class RegisterRequest {
     private String password;
     private String phone;
     private String address;
+    private  String laboratoire;
     private Set<String> roles;
 }
