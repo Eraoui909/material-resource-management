@@ -1,4 +1,4 @@
-package com.gestion_ressource.micro_authentification.model;
+package com.gestion_ressource.micro_respo.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,7 +36,7 @@ public class User {
 
     private String Address;
 
-    private String Laboratory;
+    private String laboratory;
 
     private Set<Role> authorities = new HashSet<Role>();
 

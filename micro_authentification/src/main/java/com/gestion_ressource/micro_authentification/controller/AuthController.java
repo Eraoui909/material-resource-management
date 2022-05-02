@@ -56,17 +56,16 @@ public class AuthController {
 
         UserAuth userDetails = (UserAuth) authentication.getPrincipal();
 
-        List<String> roles = userDetails.getAuthorities().stream()
-                .map(GrantedAuthority::getAuthority)
-                .collect(Collectors.toList()
-        );
+//        List<String> roles = userDetails.getAuthorities().stream()
+//                .map(GrantedAuthority::getAuthority)
+//                .collect(Collectors.toList()
+//        );
         log.info("login");
 
-        return new ResponseEntity<JwtResponse>(new JwtResponse(jwt,
-                    userDetails.getId(),
-                    userDetails.getUsername(),
-                    userDetails.getEmail(),
-                    roles),
+        return new ResponseEntity<JwtResponse>(new JwtResponse(
+                jwt,
+                userRepository.findById(userDetails.getId()).orElseThrow()
+        ),
                 HttpStatus.OK
         );
     }
