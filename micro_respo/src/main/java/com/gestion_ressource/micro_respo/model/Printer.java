@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotBlank;
 
-@Document(collection = "printers")
+@Document(collection = "resources")
 @NoArgsConstructor
 @Getter
 @Setter

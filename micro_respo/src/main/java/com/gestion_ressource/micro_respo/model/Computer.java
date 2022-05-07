@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import javax.validation.constraints.NotBlank;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "computers")
+@Document(collection = "resources")
 @NoArgsConstructor
 @Getter
 @Setter

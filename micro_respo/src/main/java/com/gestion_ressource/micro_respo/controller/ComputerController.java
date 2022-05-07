@@ -30,7 +30,7 @@ public class ComputerController {
 
     @GetMapping("/")
     public List<Computer> getAll(){
-        return repo.findAll();
+        return repo.getAllComputers();
     }
 
     @GetMapping("/{id}")
