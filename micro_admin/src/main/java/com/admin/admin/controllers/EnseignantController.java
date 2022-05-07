@@ -30,10 +30,11 @@ public class EnseignantController {
 
 
     @GetMapping("/")
-    public List<User> getAllTeachers(){
+    public List<User> getAllTeachers() {
         Set<Role> authorities = new HashSet<>();
         authorities.add(new Role(ERole.ROLE_ADMIN));
         return repo.findByAuthorities(authorities);
+
     }
 
     @GetMapping("/{id}")

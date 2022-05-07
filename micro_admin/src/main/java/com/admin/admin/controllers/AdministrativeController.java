@@ -21,7 +21,7 @@ public class AdministrativeController {
 
     @GetMapping("/")
     public List<Administrative> getAlladministative(){
-        return repo.findAll();
+        return repo.findAdministrative();
     }
 
     @GetMapping("/{id}")

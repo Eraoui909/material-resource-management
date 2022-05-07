@@ -30,7 +30,7 @@ public class PrinterController {
 
     @GetMapping("/")
     public List<Printer> getAll(){
-        return repo.findAll();
+        return repo.getAllPrinters();
     }
 
     @GetMapping("/{id}")
