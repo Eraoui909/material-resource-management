@@ -1,9 +1,7 @@
 package com.admin.admin.controllers;
 
 import com.admin.admin.models.Department;
-import com.admin.admin.models.Enseignant;
 import com.admin.admin.repositries.DepartmentRepo;
-import com.admin.admin.repositries.EnseignantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
