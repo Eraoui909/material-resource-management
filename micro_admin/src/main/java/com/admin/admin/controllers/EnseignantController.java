@@ -26,7 +26,7 @@ public class EnseignantController {
 
     @GetMapping("/")
     public List<Enseignant> getAllTeachers(){
-        return repo.findAll();
+        return repo.findEnseignants();
     }
 
     @GetMapping("/{id}")
