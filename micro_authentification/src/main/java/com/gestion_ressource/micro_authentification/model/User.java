@@ -23,6 +23,9 @@ public class User {
     @NotBlank
     private String username;
 
+    @NotBlank
+    private String name;
+
     @Email
     @NotBlank
     @Size(max = 60, min = 15)
@@ -34,10 +37,12 @@ public class User {
     @NotBlank
     private String phone;
 
-    private String Address;
+    @NotBlank
+    private String address;
 
-    private String Laboratory;
+    private String laboratoire;
 
+    @NotBlank
     private Set<Role> authorities = new HashSet<Role>();
 
     public User(String username, String email, String password) {
