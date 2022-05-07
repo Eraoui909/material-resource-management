@@ -32,7 +32,7 @@ public class JwtResponse {
         this.email = user.getEmail();
         this.phone = user.getPhone();
         this.Address = user.getAddress();
-        this.Laboratory = user.getLaboratory();
+        this.Laboratory = user.getLaboratoire();
         List<ERole> roles = user.getAuthorities().stream()
                 .map(Role::getName)
                 .collect(Collectors.toList()
