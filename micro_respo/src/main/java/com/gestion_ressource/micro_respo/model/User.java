@@ -38,6 +38,8 @@ public class User {
 
     private String laboratory;
 
+    private String department;
+
     private Set<Role> authorities = new HashSet<Role>();
 
     public User(String username, String email, String password) {

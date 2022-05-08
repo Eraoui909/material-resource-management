@@ -10,4 +10,9 @@ public interface ComputerRepository extends MongoRepository<Computer, String> {
     @Query("{ 'CPU': { $exists: true } }")
     List<Computer> getAllComputers();
 
+    @Query("{ 'affectedToOwner.username' : ?0 }")
+    List<Computer> getResourcesByOwnerUsername(String username);
+
+
+
 }

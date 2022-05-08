@@ -4,6 +4,7 @@ import com.admin.admin.models.ERole;
 import com.admin.admin.models.Enseignant;
 import com.admin.admin.models.Role;
 import com.admin.admin.models.User;
+import com.admin.admin.repositries.EnseignantRepo;
 import com.admin.admin.repositries.UserRepo;
 import com.admin.admin.services.EnseignantService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -27,13 +28,14 @@ public class EnseignantController {
     @Autowired
     private UserRepo repo;
 
+    @Autowired
+    EnseignantRepo enseignantRepo;
+
 
 
     @GetMapping("/")
-    public List<User> getAllTeachers() {
-        Set<Role> authorities = new HashSet<>();
-        authorities.add(new Role(ERole.ROLE_ADMIN));
-        return repo.findByAuthorities(authorities);
+    public List<Enseignant> getAllTeachers() {
+        return enseignantRepo.findEnseignants();
 
     }
 
@@ -43,9 +45,9 @@ public class EnseignantController {
         return repo.findById(id);
     }
 
-    @GetMapping("/laboratoire/{name}")
-    public List<User> getByLaboratoire(@PathVariable String name){
-        return repo.findByLaboratory(name);
+    @GetMapping("/department/{name}")
+    public List<User> getByDepartment(@PathVariable String name){
+        return repo.findByDepartment(name);
     }
 
     @PostMapping("/add") @JsonIgnore

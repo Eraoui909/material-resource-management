@@ -99,6 +99,9 @@ public class AuthController {
 
         String laboratoire = registerRequest.getLaboratoire();
 
+        String department = registerRequest.getDepartment();
+
+
 
 
         Set<Role> roles = new HashSet<>();
@@ -148,6 +151,7 @@ public class AuthController {
         user.setAddress(address);
         user.setPhone(phone);
         user.setName(name);
+        user.setDepartment(department);
         user.setLaboratoire(laboratoire);
         userRepository.save(user);
 

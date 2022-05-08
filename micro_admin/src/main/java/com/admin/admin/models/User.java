@@ -36,7 +36,10 @@ public class User {
 
     private String Address;
 
-    private String Laboratory;
+    private String laboratory;
+
+    private String department;
+
 
     private Set<Role> authorities = new HashSet<Role>();
 

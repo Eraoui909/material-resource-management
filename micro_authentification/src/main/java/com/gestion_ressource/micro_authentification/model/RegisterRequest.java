@@ -17,5 +17,6 @@ public class RegisterRequest {
     private String phone;
     private String address;
     private String laboratoire;
+    private String department;
     private Set<String> roles;
 }

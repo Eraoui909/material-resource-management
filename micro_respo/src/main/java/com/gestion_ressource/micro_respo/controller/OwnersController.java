@@ -29,13 +29,13 @@ public class OwnersController {
     }
 
     @GetMapping("/name/{name}")
-    public Optional<Owner> getByName(@PathVariable String name){
-        return repo.findByName(name);
+    public Optional<Owner> getByUsername(@PathVariable String name){
+        return repo.findByUsername(name);
     }
 
     @GetMapping("/departement/{name}")
     public Optional<Owner> getByLaboratoire(@PathVariable String name){
-        return repo.findByLaboratoire(name);
+        return repo.findByDepartment(name);
     }
 
 }

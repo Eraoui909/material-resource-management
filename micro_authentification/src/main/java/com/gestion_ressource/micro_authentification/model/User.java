@@ -42,6 +42,8 @@ public class User {
 
     private String laboratoire;
 
+    private String department;
+
     @NotBlank
     private Set<Role> authorities = new HashSet<Role>();
 

@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface OwnerRepo extends MongoRepository<Owner,String> {
 
 
-    Optional<Owner> findByName(String name);
+    Optional<Owner> findByUsername(String username);
 
-    Optional<Owner> findByLaboratoire(String lab);
+    Optional<Owner> findByDepartment(String dep);
 }

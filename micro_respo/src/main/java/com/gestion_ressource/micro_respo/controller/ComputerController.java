@@ -20,6 +20,8 @@ public class ComputerController {
 
     @PostMapping("/add")
     public void save(@RequestBody Computer computer){
+        System.err.println(computer.toString());
+
         repo.save(computer);
     }
 
@@ -31,6 +33,11 @@ public class ComputerController {
     @GetMapping("/")
     public List<Computer> getAll(){
         return repo.getAllComputers();
+    }
+
+    @GetMapping("/resources/teacher/{username}")
+    public List<Computer> getAll(@PathVariable String username){
+        return repo.getResourcesByOwnerUsername(username);
     }
 
     @GetMapping("/{id}")

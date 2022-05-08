@@ -41,6 +41,8 @@ public class Enseignant {
     @NotBlank
     private  String laboratoire;
 
+    private  String department;
+
     private Set<String> roles = Set.of("prof");
 
 }
