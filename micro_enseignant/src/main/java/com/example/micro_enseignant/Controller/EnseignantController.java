@@ -1,7 +1,9 @@
 package com.example.micro_enseignant.Controller;
 
 import com.example.micro_enseignant.models.Enseignant;
+import com.example.micro_enseignant.models.Panne;
 import com.example.micro_enseignant.repository.EnseignantRepo;
+import com.example.micro_enseignant.repository.PanneRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,9 +17,17 @@ public class EnseignantController {
     @Autowired
     private EnseignantRepo repo;
 
+    @Autowired
+    private PanneRepo panneRepo;
+
     @GetMapping("/{id}")
     public Optional<Enseignant> getenseignantbyid(@PathVariable String id){
         return repo.findById(id);
+    }
+
+    @PostMapping("/signalerPanne")
+    public Panne signalerPanne(@RequestBody Panne panne){
+        return panneRepo.save(panne);
     }
 
 }
