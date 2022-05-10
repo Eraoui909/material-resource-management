@@ -9,6 +9,7 @@ import com.admin.admin.repositries.UserRepo;
 import com.admin.admin.services.EnseignantService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
@@ -63,8 +64,8 @@ public class EnseignantController {
     }
 
     @PostMapping("/update")
+    @Transactional
     public User updateTeacher(@RequestBody User e){
-
         return repo.save(e);
     }
 
