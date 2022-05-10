@@ -41,9 +41,9 @@ public class EnseignantController {
     }
 
     @GetMapping("/{id}")
-    public Optional<User> getTeacher(@PathVariable String id){
+    public Enseignant getTeacher(@PathVariable String id){
 
-        return repo.findById(id);
+        return enseignantRepo.findEnseignantsById(id);
     }
 
     @GetMapping("/department/{name}")
@@ -53,8 +53,6 @@ public class EnseignantController {
 
     @PostMapping("/add") @JsonIgnore
     public Enseignant addTeacher(@RequestBody Enseignant e){
-        e.setId("54655644654");
-
         e.setPassword(e.getEmail());
         e.setUsername(e.getEmail());
         System.err.println(e.toString());
@@ -64,10 +62,20 @@ public class EnseignantController {
     }
 
     @PostMapping("/update")
-    @Transactional
-    public User updateTeacher(@RequestBody User e){
+//<<<<<<< HEAD
+//    @Transactional
+    public User updateTeacher(@RequestBody User e) {
+
         return repo.save(e);
     }
+//=======
+//    public Enseignant updateTeacher(@RequestBody Enseignant e){
+//
+//        Enseignant en = enseignantRepo.findEnseignantsByEmail(e.getEmail()).orElseThrow(()-> new IllegalStateException("enseignant doesnt exist"));
+//        en.setEmail(e.getEmail());
+//
+//        return en;
+//    }
 
     @DeleteMapping("/{id}")
     public void deleteTeacher(@PathVariable String id){
