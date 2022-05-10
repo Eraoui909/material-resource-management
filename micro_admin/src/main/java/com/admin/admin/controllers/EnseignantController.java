@@ -61,14 +61,9 @@ public class EnseignantController {
         return e;
     }
 
-    @Transactional
     @PostMapping("/update")
     public Enseignant updateTeacher(@RequestBody Enseignant e){
-
-        Enseignant en = enseignantRepo.findEnseignantsByEmail(e.getEmail()).orElseThrow(()-> new IllegalStateException("enseignant doesnt exist"));
-        en.setEmail(e.getEmail());
-
-        return en;
+        return enseignantService.updateTeacherService(e);
     }
 
     @DeleteMapping("/{id}")

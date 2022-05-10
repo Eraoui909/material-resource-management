@@ -7,10 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "pannes")
 public class Panne {
 
-    String dateAppartition;
-    String explicationPanne;
-    String frequencePanne;
-    String ordrePanne;
-    String declaredBy;
+    private String dateAppartition;
+    private String explicationPanne;
+    private String frequencePanne;
+    private String ordrePanne;
+    private String declaredBy;
+    private EState etats;
 
 }
