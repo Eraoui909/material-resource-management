@@ -11,10 +11,12 @@ import java.util.Set;
 @Setter
 public class RegisterRequest {
     private String username;
+    private String name;
     private String email;
     private String password;
     private String phone;
     private String address;
-    private  String laboratoire;
+    private String laboratoire;
+    private String department;
     private Set<String> roles;
 }

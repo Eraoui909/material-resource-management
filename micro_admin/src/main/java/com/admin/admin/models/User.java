@@ -1,4 +1,4 @@
-package com.gestion_ressource.micro_authentification.model;
+package com.admin.admin.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,9 +23,6 @@ public class User {
     @NotBlank
     private String username;
 
-    @NotBlank
-    private String name;
-
     @Email
     @NotBlank
     @Size(max = 60, min = 15)
@@ -37,14 +34,13 @@ public class User {
     @NotBlank
     private String phone;
 
-    @NotBlank
-    private String address;
+    private String Address;
 
-    private String laboratoire;
+    private String laboratory;
 
     private String department;
 
-    @NotBlank
+
     private Set<Role> authorities = new HashSet<Role>();
 
     public User(String username, String email, String password) {

@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotBlank;
 
-@Document(collection = "printers")
+@Document(collection = "resources")
 @NoArgsConstructor
 @Getter
 @Setter
@@ -31,7 +31,9 @@ public class Printer {
     @NotBlank
     private String warrantyPeriod;
 
-    private Owner affectedTo;
+    private Owner affectedToOwner;
+
+    private String affectedToDepartment;
 
     @NotBlank
     private String Date;

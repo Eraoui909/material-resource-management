@@ -1,14 +1,20 @@
 package com.admin.admin.controllers;
 
+import com.admin.admin.models.ERole;
 import com.admin.admin.models.Enseignant;
+import com.admin.admin.models.Role;
+import com.admin.admin.models.User;
 import com.admin.admin.repositries.EnseignantRepo;
+import com.admin.admin.repositries.UserRepo;
 import com.admin.admin.services.EnseignantService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -20,24 +26,28 @@ public class EnseignantController {
     private EnseignantService enseignantService;
 
     @Autowired
-    private EnseignantRepo repo;
+    private UserRepo repo;
+
+    @Autowired
+    EnseignantRepo enseignantRepo;
 
 
 
     @GetMapping("/")
-    public List<Enseignant> getAllTeachers(){
-        return repo.findAll();
+    public List<Enseignant> getAllTeachers() {
+        return enseignantRepo.findEnseignants();
+
     }
 
     @GetMapping("/{id}")
-    public Optional<Enseignant> getTeacher(@PathVariable String id){
+    public Optional<User> getTeacher(@PathVariable String id){
 
         return repo.findById(id);
     }
 
-    @GetMapping("/laboratoire/{name}")
-    public List<Enseignant> getByLaboratoire(@PathVariable String name){
-        return repo.findByLaboratoire(name);
+    @GetMapping("/department/{name}")
+    public List<User> getByDepartment(@PathVariable String name){
+        return repo.findByDepartment(name);
     }
 
     @PostMapping("/add") @JsonIgnore
@@ -53,7 +63,7 @@ public class EnseignantController {
     }
 
     @PostMapping("/update")
-    public Enseignant updateTeacher(@RequestBody Enseignant e){
+    public User updateTeacher(@RequestBody User e){
 
         return repo.save(e);
     }

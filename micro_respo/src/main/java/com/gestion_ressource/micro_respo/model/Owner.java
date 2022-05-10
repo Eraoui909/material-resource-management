@@ -11,21 +11,23 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Data
-@Document(collection = "enseignant")
+@Document(collection = "users")
 @Setter
 @Getter
 public class Owner {
     @Id
     private String id;
 
-    @NotBlank
-    private String name;
+    private String username;
 
-    private  String laboratoire;
+    private  String department;
 
-    public Owner(String id, String name, String laboratoire) {
+
+
+
+    public Owner(String id, String username, String department) {
         this.id = id;
-        this.name = name;
-        this.laboratoire = laboratoire;
+        this.username = username;
+        this.department = department;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import javax.validation.constraints.NotBlank;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "computers")
+@Document(collection = "resources")
 @NoArgsConstructor
 @Getter
 @Setter
@@ -42,5 +42,22 @@ public class Computer {
 
     @NotBlank
     private String Date;
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "id='" + id + '\'' +
+                ", provider='" + provider + '\'' +
+                ", marque='" + marque + '\'' +
+                ", CPU='" + CPU + '\'' +
+                ", hardDisk='" + hardDisk + '\'' +
+                ", RAM='" + RAM + '\'' +
+                ", screen='" + screen + '\'' +
+                ", warrantyPeriod='" + warrantyPeriod + '\'' +
+                ", affectedToOwner=" + affectedToOwner.getDepartment() +
+                ", affectedToDepartment='" + affectedToDepartment + '\'' +
+                ", Date='" + Date + '\'' +
+                '}';
+    }
 }
 

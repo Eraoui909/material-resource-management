@@ -91,6 +91,19 @@ public class AuthController {
 
         Set<String> strRoles = registerRequest.getRoles();
 
+        String address = registerRequest.getAddress();
+
+        String phone = registerRequest.getPhone();
+
+        String name = registerRequest.getName();
+
+        String laboratoire = registerRequest.getLaboratoire();
+
+        String department = registerRequest.getDepartment();
+
+
+
+
         Set<Role> roles = new HashSet<>();
 
         if (strRoles == null) {
@@ -135,6 +148,11 @@ public class AuthController {
         });
 
         user.setAuthorities(roles);
+        user.setAddress(address);
+        user.setPhone(phone);
+        user.setName(name);
+        user.setDepartment(department);
+        user.setLaboratoire(laboratoire);
         userRepository.save(user);
 
         return new ResponseEntity<String>("Success: user regitered successfully!", HttpStatus.OK);

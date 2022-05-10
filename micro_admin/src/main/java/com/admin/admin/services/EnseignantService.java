@@ -14,7 +14,7 @@ public class EnseignantService {
     private final WebClient webClient;
 
     public EnseignantService(WebClient.Builder builder) {
-        this.webClient = builder.baseUrl("http://localhost:8081").build();
+        this.webClient = builder.baseUrl("http://localhost:8080").build();
     }
 
     @JsonIgnore
