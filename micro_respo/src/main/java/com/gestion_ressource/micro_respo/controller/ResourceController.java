@@ -1,5 +1,6 @@
 package com.gestion_ressource.micro_respo.controller;
 
+import com.gestion_ressource.micro_respo.model.Panne;
 import com.gestion_ressource.micro_respo.model.Resource;
 import com.gestion_ressource.micro_respo.repository.ResourceRepo;
 import lombok.extern.slf4j.Slf4j;
@@ -18,10 +19,18 @@ public class ResourceController {
     private ResourceRepo resourceRepo;
 
 
-    @GetMapping("/{username}")
+    @GetMapping("/username/{username}")
     public List<Resource> getAll(@PathVariable String username){
-
         return resourceRepo.getResourcesByOwnerUsername(username);
+    }
+
+    @PostMapping("/signalerPanne")
+    public Resource addPanne(@RequestBody Panne panne){
+
+        Resource r = resourceRepo.findResourceById(panne.getId());
+        panne.setId(null);
+        r.setPanne(panne);
+        return resourceRepo.save(r);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.gestion_ressource.micro_respo.model;
+package com.example.micro_enseignant.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,17 +24,6 @@ public class Resource {
     @NotBlank
     private String marque;
 
-    private String speed;
-
-    private String resolution;
-
-    private String CPU;
-
-    private String hardDisk;
-
-    private String RAM;
-
-    private String screen;
 
     @NotBlank
     private String warrantyPeriod;
@@ -46,6 +35,7 @@ public class Resource {
     @NotBlank
     private String Date;
 
-    private Panne panne;
+    @NotBlank
+    private Boolean signaler = false;
 
 }
