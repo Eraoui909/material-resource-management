@@ -10,6 +10,6 @@ public class Panne {
     private String frequencePanne;
     private String ordrePanne;
     private String declaredBy;
-    private EState etats;
+    private EState etats = EState.ENCOURS;
 
 }
