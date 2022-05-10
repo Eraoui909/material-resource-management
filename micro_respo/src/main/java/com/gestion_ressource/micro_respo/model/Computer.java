@@ -3,6 +3,7 @@ package com.gestion_ressource.micro_respo.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import javax.validation.constraints.NotBlank;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Computer {
     @Id
     private String id;
@@ -43,21 +45,5 @@ public class Computer {
     @NotBlank
     private String Date;
 
-    @Override
-    public String toString() {
-        return "Computer{" +
-                "id='" + id + '\'' +
-                ", provider='" + provider + '\'' +
-                ", marque='" + marque + '\'' +
-                ", CPU='" + CPU + '\'' +
-                ", hardDisk='" + hardDisk + '\'' +
-                ", RAM='" + RAM + '\'' +
-                ", screen='" + screen + '\'' +
-                ", warrantyPeriod='" + warrantyPeriod + '\'' +
-                ", affectedToOwner=" + affectedToOwner.getDepartment() +
-                ", affectedToDepartment='" + affectedToDepartment + '\'' +
-                ", Date='" + Date + '\'' +
-                '}';
-    }
 }
 
