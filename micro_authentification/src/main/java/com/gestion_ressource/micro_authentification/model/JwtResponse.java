@@ -19,6 +19,7 @@ public class JwtResponse {
     private String token;
     private String Id;
     private String username;
+    private String name;
     private String email;
     private String phone;
     private String Address;
@@ -29,6 +30,7 @@ public class JwtResponse {
         this.token = token;
         this.Id = user.getId();
         this.username = user.getUsername();
+        this.name = user.getName();
         this.email = user.getEmail();
         this.phone = user.getPhone();
         this.Address = user.getAddress();
