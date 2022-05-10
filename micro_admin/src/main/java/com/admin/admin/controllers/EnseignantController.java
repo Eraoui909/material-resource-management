@@ -9,6 +9,7 @@ import com.admin.admin.repositries.UserRepo;
 import com.admin.admin.services.EnseignantService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
@@ -40,9 +41,9 @@ public class EnseignantController {
     }
 
     @GetMapping("/{id}")
-    public Optional<User> getTeacher(@PathVariable String id){
+    public Enseignant getTeacher(@PathVariable String id){
 
-        return repo.findById(id);
+        return enseignantRepo.findEnseignantsById(id);
     }
 
     @GetMapping("/department/{name}")
@@ -52,8 +53,6 @@ public class EnseignantController {
 
     @PostMapping("/add") @JsonIgnore
     public Enseignant addTeacher(@RequestBody Enseignant e){
-        e.setId("54655644654");
-
         e.setPassword(e.getEmail());
         e.setUsername(e.getEmail());
         System.err.println(e.toString());
@@ -62,10 +61,14 @@ public class EnseignantController {
         return e;
     }
 
+    @Transactional
     @PostMapping("/update")
-    public User updateTeacher(@RequestBody User e){
+    public Enseignant updateTeacher(@RequestBody Enseignant e){
 
-        return repo.save(e);
+        Enseignant en = enseignantRepo.findEnseignantsByEmail(e.getEmail()).orElseThrow(()-> new IllegalStateException("enseignant doesnt exist"));
+        en.setEmail(e.getEmail());
+
+        return en;
     }
 
     @DeleteMapping("/{id}")
