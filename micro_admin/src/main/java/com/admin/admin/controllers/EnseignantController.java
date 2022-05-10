@@ -63,10 +63,15 @@ public class EnseignantController {
 
     @PostMapping("/update")
 //<<<<<<< HEAD
+//<<<<<<< HEAD
 //    @Transactional
     public User updateTeacher(@RequestBody User e) {
 
         return repo.save(e);
+//=======
+//    public Enseignant updateTeacher(@RequestBody Enseignant e){
+//        return enseignantService.updateTeacherService(e);
+//>>>>>>> c32f328d9297d960df41b038b258ea4e1d2bd661
     }
 //=======
 //    public Enseignant updateTeacher(@RequestBody Enseignant e){

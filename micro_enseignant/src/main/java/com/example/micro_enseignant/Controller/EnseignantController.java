@@ -1,5 +1,6 @@
 package com.example.micro_enseignant.Controller;
 
+import com.example.micro_enseignant.models.EState;
 import com.example.micro_enseignant.models.Enseignant;
 import com.example.micro_enseignant.models.Panne;
 import com.example.micro_enseignant.repository.EnseignantRepo;
@@ -27,6 +28,7 @@ public class EnseignantController {
 
     @PostMapping("/signalerPanne")
     public Panne signalerPanne(@RequestBody Panne panne){
+        panne.setEtats(EState.ENCOURS);
         return panneRepo.save(panne);
     }
 

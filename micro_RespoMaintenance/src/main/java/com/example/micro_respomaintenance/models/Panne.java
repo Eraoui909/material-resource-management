@@ -1,4 +1,4 @@
-package com.example.micro_enseignant.models;
+package com.example.micro_respomaintenance.models;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
