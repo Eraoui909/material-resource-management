@@ -1,7 +1,7 @@
-package com.example.micro_respomaintenance.controller;
+package com.example.micro_respomaintenanceee.controller;
 
-import com.example.micro_respomaintenance.models.Resource;
-import com.example.micro_respomaintenance.repo.RepoRessource;
+import com.example.micro_respomaintenanceee.models.Resource;
+import com.example.micro_respomaintenanceee.repo.RepoRessource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +21,6 @@ public class RespoMainteController {
 
     @GetMapping
     public List<Resource> afficherpanne(){
-        return ressource.getAllResources(null);
+        return ressource.findAll();
     }
 }

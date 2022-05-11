@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>micro_RespoMaintenance</artifactId>
+    <artifactId>micro_respoMaintenanceee</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>micro_RespoMaintenance</name>
-    <description>micro_RespoMaintenance</description>
+    <name>micro_respoMaintenanceee</name>
+    <description>micro_respoMaintenanceee</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2021.0.2</spring-cloud.version>
@@ -25,10 +25,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -52,20 +48,6 @@
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
-            <version>2.0.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-            <version>2.0.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-            <version>2.0.2</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>
