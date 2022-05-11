@@ -1,6 +1,0 @@
-spring:
-  data:
-    mongodb:
-      database: gestion_ressources
-      port: 27017
-      host: localhost
