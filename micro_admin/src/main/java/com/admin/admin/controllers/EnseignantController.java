@@ -36,6 +36,7 @@ public class EnseignantController {
 
     @GetMapping("/")
     public List<Enseignant> getAllTeachers() {
+
         return enseignantRepo.findEnseignants();
 
     }
