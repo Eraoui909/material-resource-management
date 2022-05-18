@@ -2,8 +2,13 @@ package com.example.micro_chefdep.controllers;
 
 import com.example.micro_chefdep.Services.ChefDepService;
 import com.example.micro_chefdep.models.ChefDep;
+import com.example.micro_chefdep.models.DemandRequest;
 import com.example.micro_chefdep.models.Enseignant;
+import com.example.micro_chefdep.models.Demand;
+import com.example.micro_chefdep.repositories.DemandRepo;
+import com.example.micro_chefdep.repositories.DemandRequestRepo;
 import com.example.micro_chefdep.repositories.EnseignantRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -17,6 +22,12 @@ public class ChefDepController {
 
     private ChefDepService chefDepService;
     private EnseignantRepo enseignantRepo;
+
+    @Autowired
+    private DemandRequestRepo demandRequestRepo;
+
+    @Autowired
+    private DemandRepo demandRepo;
 
     @GetMapping(path = "teachers/{depID}")
     public List<Enseignant> getTeachers(@PathVariable("depID") String id){
@@ -33,5 +44,15 @@ public class ChefDepController {
     @PostMapping(path = "update/{chefDepID}")
     public void updateChefDep(@PathVariable("chefDepID") String id, @RequestBody ChefDep chefDep){
         chefDepService.updateChefDep(id, chefDep);
+    }
+
+    @CrossOrigin(origins = "*", maxAge = 3600)    @PostMapping(path = "availableBudget")
+    public DemandRequest availableBudget(@RequestBody DemandRequest Demand){
+        return demandRequestRepo.save(Demand);
+    }
+
+    @GetMapping("/resources-requests")
+    public List<Demand> getAllRequests() {
+        return demandRepo.findAll();
     }
 }
