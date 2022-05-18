@@ -144,6 +144,11 @@ public class AuthController {
                             .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                     roles.add(administrative);
                     break;
+                case "respo_mainte":
+                    Role respo_mainte = roleRepository.findByName(ERole.ROLE_Respo_Maint)
+                            .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+                    roles.add(respo_mainte);
+                    break;
             }
         });
 

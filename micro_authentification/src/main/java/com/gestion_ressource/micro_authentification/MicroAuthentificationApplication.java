@@ -26,6 +26,13 @@ public class MicroAuthentificationApplication implements CommandLineRunner {
 //        repository.save(new Role(ERole.ROLE_PROF));
 //        repository.save(new Role(ERole.ROLE_CHEF_RESOURCES));
 //        repository.save(new Role(ERole.ROLE_PROVIDER));
+        //repository.save(new Role(ERole.ROLE_ADMIN));
+//        repository.save(new Role(ERole.ROLE_ADMINISTRATIVE));
+//        repository.save(new Role(ERole.ROLE_Respo_Maint));
+        //repository.save(new Role(ERole.ROLE_CHEF_DEP));
+        //repository.save(new Role(ERole.ROLE_PROF));
+        //repository.save(new Role(ERole.ROLE_CHEF_RESOURCES));
+        //repository.save(new Role(ERole.ROLE_PROVIDER));
     }
 
 }
