@@ -62,4 +62,9 @@ public class ChefDepController {
     public FinalDemand sendDemand(@RequestBody FinalDemand demand) {
         return finalDemandRepo.save(demand);
     }
+
+    @GetMapping("/sent-requests")
+    public List<FinalDemand> getAllSentRequests() {
+        return finalDemandRepo.findAll();
+    }
 }
