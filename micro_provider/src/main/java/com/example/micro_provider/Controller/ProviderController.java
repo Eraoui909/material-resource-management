@@ -26,9 +26,8 @@ public class ProviderController {
     public Provider addOffretoProvider(@RequestBody Provider provider){
         System.out.println(provider.toString());
         Provider pr = providerRepo.findProviderByEmail(provider.getEmail());
-
-        provider.setId(pr.getId());
-        return providerRepo.save(provider);
+        pr.setOffers(provider.getOffers());
+        return providerRepo.save(pr);
     }
 
 

@@ -45,7 +45,8 @@ public class Provider {
 
     private List<Offer> offers = new ArrayList<>();
 
-    private Set<String> roles = Set.of("provider");
+    @NotBlank
+    private Set<Role> authorities = new HashSet<Role>();
 
 
 
