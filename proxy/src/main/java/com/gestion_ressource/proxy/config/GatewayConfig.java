@@ -23,6 +23,7 @@ public class GatewayConfig {
                 .route("admin",r -> r.path("/teachers/**").uri("http://localhost:8084/"))
                 .route("chefDepartement",r -> r.path("/chefDepartement/**").uri("http://localhost:8085/"))
                 .route("respoMaintenance",r -> r.path("/maintenance/**").uri("http://localhost:8089/"))
+                .route("provider",r -> r.path("/providers/**").uri("http://localhost:8188/"))
                 .build();
     }
 
