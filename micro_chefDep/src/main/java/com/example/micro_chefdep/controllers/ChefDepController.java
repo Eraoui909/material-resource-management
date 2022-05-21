@@ -35,7 +35,7 @@ public class ChefDepController {
         en.add(new Enseignant("hanza baroudi","hamza@gmail.com","0612547878","FES","INFO"));
         en.add(new Enseignant("achraf zaim","achraf@gmail.com","065454578","RABAT","MATH"));
         en.add(new Enseignant("hamza eraoui","eraoui@gmail.com","0645487518","Sefrou","CHIMIE"));
-        en.add(new Enseignant("ayoub amazyan","ayoub@gmail.co;","0612487548","fess","MECA"));
+        en.add(new Enseignant("ayoub amazyan","ayoub@gmail.co;","0611497548","Hoceima","MECA"));
         return en;
         //return enseignantRepo.findEnseignantsByDepartement(id);
     }
