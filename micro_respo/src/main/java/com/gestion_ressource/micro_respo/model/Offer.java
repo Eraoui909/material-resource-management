@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Offers {
+public class Offer {
     @Id
     private String id;
     private String title;

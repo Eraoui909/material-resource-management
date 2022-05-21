@@ -1,7 +1,7 @@
 package com.gestion_ressource.micro_respo.controller;
 
 import com.gestion_ressource.micro_respo.model.Demand;
-import com.gestion_ressource.micro_respo.model.Offers;
+import com.gestion_ressource.micro_respo.model.Offer;
 import com.gestion_ressource.micro_respo.repository.DemandRepository;
 import com.gestion_ressource.micro_respo.repository.OffersRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -23,12 +23,12 @@ public class OfferController {
     DemandRepository demand;
 
     @GetMapping("/")
-    public List<Offers> getallOffer(){
+    public List<Offer> getallOffer(){
         return offers.findAll();
     }
 
     @PostMapping("/addtolist")
-    public Offers addOffer(@RequestBody Offers offer){
+    public Offer addOffer(@RequestBody Offer offer){
         return offers.save(offer);
     }
 
