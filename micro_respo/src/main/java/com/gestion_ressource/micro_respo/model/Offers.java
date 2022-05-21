@@ -23,6 +23,6 @@ public class Offers {
     private String title;
     private String description;
     private String status;
-    private List<Resource> resources = new ArrayList<>();
+    private List<DemandEntity> resources = new ArrayList<>();
     private String date = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss").format(LocalDateTime.now());
 }

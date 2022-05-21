@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document(collection = "demands")
+@Document(collection = "final_demands")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
