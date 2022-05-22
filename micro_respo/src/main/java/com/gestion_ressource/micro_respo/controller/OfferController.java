@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -33,8 +34,14 @@ public class OfferController {
     }
 
     @GetMapping("/demands")
-    public List<Demand> getallDemand(){
-        return demand.findAll();
+    public List<Demand> getAllDemand(){
+        return demand.getAllDemand();
     }
 
+    @GetMapping("/demand/{id}")
+    public Demand getDemandById(@PathVariable String id){
+        Demand r = demand.findById(id).get();
+        r.setStatus("Offered");
+        return demand.save(r);
+    }
 }

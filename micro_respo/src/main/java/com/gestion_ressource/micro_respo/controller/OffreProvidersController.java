@@ -36,8 +36,13 @@ public class OffreProvidersController {
                 providers.add(p);
             }
         }
-
         offer.setProviders(providers);
+        if (offer.getProviders().size() == 0){
+            offer.setStatus("En cours De traitement");
+            offer.setProviders(null);
+        }
+
+
         return offreProvidersRepo.save(offer);
     }
 }
