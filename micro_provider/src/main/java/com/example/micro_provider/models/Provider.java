@@ -43,7 +43,10 @@ public class Provider {
     @NotBlank
     private String address;
 
-    private List<Offer> offers = new ArrayList<>();
+    private List<Offer> offers;
+
+
+    private String price;
 
     @NotBlank
     private Set<Role> authorities = new HashSet<Role>();
