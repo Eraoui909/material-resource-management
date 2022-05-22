@@ -37,7 +37,7 @@ public class ProviderController {
             providers.addAll(offer.getProviders());
         }
         offer.setProviders(providers);
-
+        offer.setStatus("Offrer");
         return offerRepo.save(offer);
     }
 
