@@ -11,6 +11,6 @@ public class Panne {
     private String ordrePanne;
     private String declaredBy;
     private String commentaire;
-    private EState etats = EState.ENCOURS;
+    private String etats = String.valueOf(EState.ENCOURS);
 
 }

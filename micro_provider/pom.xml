@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>micro_enseignant</artifactId>
+    <artifactId>micro_provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>micro_enseignant</name>
-    <description>micro_enseignant</description>
+    <name>micro_provider</name>
+    <description>micro_provider</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>

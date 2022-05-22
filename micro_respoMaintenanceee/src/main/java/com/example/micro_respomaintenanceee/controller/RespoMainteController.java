@@ -29,6 +29,7 @@ public class RespoMainteController {
         Resource res = ressource.findById(request.getId()).get();
         Panne panne = res.getPanne();
         panne.setCommentaire(request.getCommentaire());
+        panne.setEtats(request.getEtat());
         res.setPanne(panne);
         return ressource.save(res);
     }
