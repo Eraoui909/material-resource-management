@@ -24,6 +24,14 @@ public class ProviderController {
     public List<Provider> findAllProviders(){
         return providerRepo.findAllProviders();
     }
+
+    @GetMapping("/myStatus/{email}")
+    public String getStatus(@PathVariable String email){
+
+         return providerRepo.findProviderByEmail(email).getStatus();
+
+    }
+
     @PostMapping
     public Offer addOffretoProvider(@RequestBody Provider provider){
         System.out.println(provider.toString());

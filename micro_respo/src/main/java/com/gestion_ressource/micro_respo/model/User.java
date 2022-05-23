@@ -36,6 +36,10 @@ public class User {
 
     private String Address;
 
+    private String name;
+
+    private String status;
+
     private String laboratory;
 
     private String department;

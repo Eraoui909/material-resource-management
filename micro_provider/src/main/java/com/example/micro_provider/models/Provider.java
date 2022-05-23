@@ -48,6 +48,8 @@ public class Provider {
 
     private String price;
 
+    private String status;
+
     @NotBlank
     private Set<Role> authorities = new HashSet<Role>();
 

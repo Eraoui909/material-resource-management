@@ -1,8 +1,6 @@
 package com.gestion_ressource.micro_respo.controller;
 
-import com.gestion_ressource.micro_respo.model.Owner;
 import com.gestion_ressource.micro_respo.model.User;
-import com.gestion_ressource.micro_respo.repository.OwnerRepo;
 import com.gestion_ressource.micro_respo.repository.UserRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +26,20 @@ public class UserController {
         user.setPassword(user1.get().getPassword());
         return repo.save(user);
 //        return user;
+    }
+    @CrossOrigin(origins = "*", maxAge = 3600)
+    @GetMapping("/users")
+    public List<User> findAll(){
+        return repo.findAll();
+    }
+
+    @CrossOrigin(origins = "*", maxAge = 3600)
+    @PostMapping("/setEliminated/{id}")
+    public String setEliminated(@PathVariable String id){
+        User u = repo.findById(id).orElseThrow();
+        u.setStatus("eliminated");
+        repo.save(u);
+        return "success";
     }
 
     @GetMapping("/{id}")
